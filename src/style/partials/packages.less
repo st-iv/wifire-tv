@@ -34,6 +34,8 @@
 .channel__container {
   background: #fff;
   padding-bottom: 50px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .channel__sum {
@@ -46,16 +48,19 @@
   list-style: none;
   margin: 0 auto;
 }
-.accordion li {
-  position: relative;
-  padding: 10px 50px 10px 0;
-  vertical-align: top;
-}
-.accordion li p {
+
+
+.channel__menu {
+  
+  margin-top: 35px;
   display: none;
   padding: 10px 0px;
   color: #6b97a4;
+    .container {
+      margin-right: 0;
+    }
 }
+
 .accordion a {
   display: inline-block;
   user-select: none;
@@ -69,16 +74,14 @@
   cursor: pointer;
   width: 8px;
   height: 8px;
-  border-right: 1px solid #4a6e78;
-  border-bottom: 1px solid #4a6e78;
+  border-right: 1px solid @orange;
+  border-bottom: 1px solid @orange;
   transform: rotate(45deg);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.accordion p {
-  padding: 10px;
-}
+
 
 .accordion .arrow.active {
   transform: rotate(-135deg);
@@ -88,3 +91,42 @@
 }
 
 // accordion--end
+
+
+
+
+.package__icon {
+  width: 68px;
+  height: 68px;
+  margin-right: 25px;
+}
+
+.package__name {
+  font-family: 'Roboto-Medium';
+  font-size: 1.4285em;
+  border-bottom: 1px dashed #b6b6b6;
+}
+
+.package__number {
+  font-family: 'Roboto-Medium';
+  font-size: 1.4285em;
+}
+
+.package__main-btn {
+   font-family: 'Roboto-Regular';
+  font-size: 0.928em;
+  color: @orange;
+  padding: 15px 50px;
+  border: 2px solid @orange;
+  &:hover, &:focus {
+    color: @orange;
+    border: 2px solid @orange;
+  }
+}
+
+.package__subitem:before {
+  content: "";
+  display: inline-block;
+  height: 68px;
+  width: 1px;
+}
