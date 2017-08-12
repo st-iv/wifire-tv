@@ -31,11 +31,13 @@
 .channel__link--active:active, .channel__link--active:focus {
   color: #fff;
 }
-.channel__container {
+.package__container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 65px;
+  padding-left: 65px;
   background: #fff;
-  padding-bottom: 50px;
-  padding-right: 0;
-  padding-left: 0;
+  padding-bottom: 30px;
 }
 
 .channel__sum {
@@ -103,30 +105,83 @@
 
 .package__name {
   font-family: 'Roboto-Medium';
-  font-size: 1.4285em;
+  font-size: 1.857em;
   border-bottom: 1px dashed #b6b6b6;
 }
 
 .package__number {
   font-family: 'Roboto-Medium';
-  font-size: 1.4285em;
+  font-size: 2.3em;
 }
 
 .package__main-btn {
-   font-family: 'Roboto-Regular';
-  font-size: 0.928em;
+   font-family: 'Roboto-Light';
+  font-size: 1.3em;
   color: @orange;
-  padding: 15px 50px;
+  padding: 8px 55px;
   border: 2px solid @orange;
   &:hover, &:focus {
     color: @orange;
     border: 2px solid @orange;
   }
+  &:before {
+    content: "Выбрать";
+  }
+
 }
 
+.package__main-btn--selected,  {
+  background: @orange;
+  color: #fff;
+  &:hover, &:active, &:focus {
+    background: @orange;
+    color: #fff;
+  }
+    &:before {
+    content: "\2714 Выбрано";
+    color: #fff;
+  }
+}
+.package__subitem {
+  padding-left: 0;
+  padding-right: 0;
+}
 .package__subitem:before {
   content: "";
   display: inline-block;
   height: 68px;
   width: 1px;
 }
+
+
+
+  .channel__point {
+    padding-top: 40px;
+    padding-left: 0;
+  }
+
+
+
+.package__container--selected {
+  border: 1px solid @orange;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.channel__name {
+  font-family: 'Roboto-Light';
+  font-size: 1.1428em;
+  color: #333;
+  padding-left: 20px;
+
+}
+
+
+// media 
+
+@media (max-width:1024px) {
+  .package__container {
+      padding-right: 30px;
+      padding-left: 30px;
+  }
+}
+

@@ -19,3 +19,35 @@ $(".arrow").click(function(e) {
   $("arrow").removeClass('active');
   $(this).addClass('active');
 })
+
+
+
+
+
+$(".package__main-btn").click(function(e) {
+  e.preventDefault();
+  $(".package__main-btn").removeClass('package__main-btn--selected');
+  $(this).addClass('package__main-btn--selected');
+
+})
+
+function showDetail(){
+   var $this=$(this); 
+    var $parent=$this.closest('.container');
+    var $detailBox=$parent.find('.channel__menu')
+}
+
+function selectBox(){
+  var $this=$(this);  
+  var $parent=$this.closest('.container');
+  $('.package__container--selected').removeClass('package__container--selected');
+  $(".package__main-btn").removeClass('package__main-btn--selected');
+  $this.addClass('package__main-btn--selected');
+  $parent.addClass('package__container--selected')
+}
+
+function ready(){
+  $('.arrow-container').on('click',showDetail)
+  $('.package__main-btn').on('click',selectBox)
+}  
+$(document).ready(ready)
