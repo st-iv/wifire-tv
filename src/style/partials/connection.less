@@ -1,18 +1,28 @@
        .connection__input {
+              font-size: 1.2em;
+              width: 100% !important;
        	text-align: left;
-       	padding: 20px 100px;
+       	padding: 28px 50px 28px 15px;
        	color: #999999;
        	border: none;
        	outline: none;
        }
 
        .connection__submit {
-       	font-size: 1.642em;
+              border-radius: 0;
+              box-shadow: 0 10px 18px rgba(230, 93, 23, 0.1);
+       	font-size: 1.3em;
        	background: @orange;
        	color: #fff;
-       	padding: 20px 54px;
+       	padding: 15px 80px;
        	border: none;
+                &:hover, &:active, 
+                &:focus {
+                   background: @orange;
+                   color: #fff;  
+                } 
        }
+
 @media (max-width:1024px) {
        	.connection__form {
        	display: inline-block;
