@@ -7,7 +7,10 @@
 
 
 // watch-nav
+
+
 .watch__img {
+
 	display: inline-block;
 	margin-top: 15px;
 	margin-right: 0;
@@ -98,6 +101,7 @@
 }
 
 .watch-footer__desc {
+	margin-top: 15px;
 	font-family: 'Roboto-Medium';
 	font-size: 1.5em;
 }
@@ -123,5 +127,19 @@
 	}
 	.watch-footer__buttons {
 		text-align: center;
+	}
+	.watch__row {
+		text-align: center;
+	}
+}
+
+@media (max-width:450px) {
+	.watch-footer__btn {
+		display: block;
+		margin-top: 8px;
+		width: 100%;
+		&:last-child {
+			margin-left: 0;
+		}
 	}
 }
