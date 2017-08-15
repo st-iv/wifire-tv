@@ -131,7 +131,38 @@
 
 }
 
-.package__main-btn--selected,  {
+.package__add-btn {
+   font-family: 'Roboto-Light';
+  font-size: 1.3em;
+  color: @orange;
+  padding: 8px 55px;
+  border: 2px solid @orange;
+  &:hover, &:focus {
+    color: @orange;
+    border: 2px solid @orange;
+  }
+  &:before {
+    content: "+ Добавить";
+  }
+
+}
+
+.package__add-btn--selected  {
+  background: @orange;
+  color: #fff;
+  &:hover, &:active, &:focus {
+    background: @orange;
+    color: #fff;
+  }
+    &:before {
+    content: "\2714 Добавлено";
+    color: #fff;
+  }
+}
+
+
+
+.package__main-btn--selected  {
   background: @orange;
   color: #fff;
   &:hover, &:active, &:focus {
@@ -176,6 +207,15 @@
 
 }
 
+.packages__all {
+  margin-top: 30px;
+  color: @orange;
+  border-bottom: 1px solid @orange;
+  &:hover, &:active, &:focus {
+    color: @orange;
+    border-bottom: 1px solid @orange;
+  }
+}
 
 // media 
 
@@ -193,6 +233,8 @@
       text-align: right;
     }
   }
-
+  
 }
+
+
 

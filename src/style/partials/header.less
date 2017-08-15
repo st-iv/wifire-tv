@@ -1,5 +1,5 @@
 
-.nav__list {
+.nav__list, .nav__contact-list {
 	list-style: none;
 }
 .nav__item, .nav__conctact {
@@ -39,6 +39,9 @@
 
 .top-menu__link span {
 	color: #bebebe;
+	
+}
+.top-menu__place {
 	border-bottom: 1px dashed #bebebe;
 }
 
@@ -112,7 +115,7 @@
 }
 
 
-.nav__list {
+.nav__list, .nav__contact-list {
 	padding-bottom: 0;
 	margin: 0;
 	padding-top: 15px;
@@ -127,4 +130,57 @@
 }
 .nav__conctact:last-child {
 	margin-right: 0;
+}
+
+.menu-trigger, .menu-trigger-phone, .mobile_menu {
+  display:none;
+}
+.logo_xs {
+	display: none;
+	padding-top: 15px;
+}
+@media (max-width: 1024px)   {
+	.top-menu__action span {
+	display: none;
+	}
+
+	.nav__item--logo {
+		display: none !important;
+	}
+	.top-menu__shop{
+		display: none;
+	}
+	.top-menu__action {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	.mobile_menu {
+		display: block;
+		padding-bottom: 3px;
+	}
+	.menu-trigger {
+		margin-right: 20px;
+	}
+	.menu-trigger, .menu-trigger-phone {
+    display:inline-block;
+    float: right;
+    }
+	
+
+   .nav__item, .nav__conctact {
+     display:block;
+     padding-top: 15px;
+     width: 100%;
+     border-top: 1px solid @light-gray ;    
+   }
+
+   .nav__list {
+     display:none;
+   }
+   .nav__contact-list {
+   	display: none;
+   }
+   .logo_xs {
+   	display: inline-block;
+   }
 }
