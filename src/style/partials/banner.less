@@ -1,23 +1,107 @@
 .banner__wrapper {
 	padding: 0;
     margin-top: 38px;
+
 }
 
 .banner__container {
-	background: url(../img/banner2.png) no-repeat center;
-	height: 211px;
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
+    box-shadow: 0px 11px 38px rgba(240,108,23,0.4);
+    position:relative;
+ //    position: relative;
+	// background: url(../img/banner2.png) no-repeat center;
+	// height: 211px;
+ //    background-repeat:no-repeat;
+ //    background-size:contain;
+ //    background-position:center;
 }
 
-@media (max-width: 1024px) {
-	.banner__container {
-	background: url(../img/banner-xs.png) no-repeat center;
-	height: 479px;
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;	
-    padding: 0;
-    }
+.banner__btn, .banner__btn:hover,
+.banner__btn:active, .banner__btn:focus {
+    position: absolute;
+    display:inline-block;
+    position:absolute;
+    bottom:5px;   
+    left:2%;
+    border-bottom: 1px solid #fff;
+    color:#FFF;
+}   
+
+ .banner__container-xs, .banner__img-xs,
+ .banner__btn-xs {
+    display: none;
+ }
+
+@media (max-width: @tablet) {
+	// .banner__container {
+	// background: url(../img/banner-xs.png) no-repeat center;
+	// height: 479px;
+ //    background-repeat:no-repeat;
+ //    background-size:contain;
+ //    background-position:center;	
+ //    padding: 0;
+ //    }
+
+ .banner__img, .banner__container,
+ .banner__btn {
+    display: none;
+ }
+ .banner__img-xs {
+    display: inline-block;
+    box-shadow: 0px 11px 38px rgba(240,108,23,0.4);
+
+ }
+ .banner__container-xs,
+ .banner__btn-xs {
+    display: block;
+ }
+
+ .banner__container-xs {
+    position:relative;
+    text-align: center;
+    display: block;
+    margin-top: 70px;
+ }
+
+
+.banner__btn-xs, .banner__btn-xs:hover,
+.banner__btn-xs:active, .banner__btn-xs:focus {
+    position: absolute;
+    display:inline-block;
+    position:absolute;
+    bottom:5px;   
+    left:20%;
+    border-bottom: 1px solid #fff;
+    color:#FFF;
+}  
+
 }
+
+@media (max-width: 640px) {
+
+    .banner__btn-xs, .banner__btn-xs:hover,
+    .banner__btn-xs:active, .banner__btn-xs:focus {
+    position: absolute;
+    display:inline-block;
+    position:absolute;
+    bottom:5px;   
+    left:6%;
+    border-bottom: 1px solid #fff;
+    color:#FFF;
+  }
+}
+
+@media (max-width: 991px) {
+
+    .banner__btn-xs, .banner__btn-xs:hover,
+    .banner__btn-xs:active, .banner__btn-xs:focus {
+    position: absolute;
+    display:inline-block;
+    position:absolute;
+    bottom:5px;   
+    left:6%;
+    border-bottom: 1px solid #fff;
+    color:#FFF;
+  }
+}
+
+// 639 991

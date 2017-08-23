@@ -56,7 +56,7 @@
   
   margin-top: 35px;
   display: none;
-  padding: 10px 0px;
+  padding: 10px 15px;
   color: #6b97a4;
     .container {
       margin-right: 0;
@@ -100,10 +100,12 @@
 .package__icon {
   width: 68px;
   height: 68px;
+  margin-top: 30px;
   margin-right: 25px;
 }
 
 .package__name {
+  cursor: pointer;
   font-family: 'Roboto-Medium';
   font-size: 1.857em;
   border-bottom: 1px dashed #b6b6b6;
@@ -131,17 +133,34 @@
 
 }
 
+.package__main-btn--selected  {
+  background: @orange;
+  color: #fff;
+  padding: 8px 46px;
+  &:hover, &:active, &:focus {
+    background: @orange;
+    color: #fff;
+  }
+
+  &:before {
+  white-space: nowrap;
+  content: "\2714  Выбран";
+  color: #fff;
+  }
+}
 .package__add-btn {
    font-family: 'Roboto-Light';
   font-size: 1.3em;
   color: @orange;
-  padding: 8px 55px;
+  padding: 8px 43px;
   border: 2px solid @orange;
   &:hover, &:focus {
     color: @orange;
     border: 2px solid @orange;
   }
   &:before {
+    white-space: nowrap;
+    padding-right: 15px;
     content: "+ Добавить";
   }
 
@@ -150,6 +169,7 @@
 .package__add-btn--selected  {
   background: @orange;
   color: #fff;
+  padding: 8px 43px;
   &:hover, &:active, &:focus {
     background: @orange;
     color: #fff;
@@ -162,21 +182,10 @@
 
 
 
-.package__main-btn--selected  {
-  background: @orange;
-  color: #fff;
-  &:hover, &:active, &:focus {
-    background: @orange;
-    color: #fff;
-  }
-    &:before {
-    content: "\2714 Выбрано";
-    color: #fff;
-  }
-}
+
 .package__subitem {
-  padding-left: 0;
-  padding-right: 0;
+  // padding-left: 0;
+  // padding-right: 0;
 }
 .package__subitem:before {
   content: "";
@@ -219,22 +228,82 @@
 
 // media 
 
-@media (max-width:1024px) {
-  .package__container {
-      padding-right: 30px;
-      padding-left: 30px;
+
+
+
+
+@media (max-width:1499px) {
+  
+  // .package__subitem {
+  //   text-align: left;
+  //   &:first-child {
+  //     text-align: left;
+  //   }
+  //   &:last-child {
+  //     margin-top: 15px;
+  //     text-align: right;
+  //   }
+  // }
+
+  .package__name {
+    padding-left: 0;
+
   }
-  .package__subitem {
-    text-align: center;
-    &:first-child {
-      text-align: left;
-    }
-    &:last-child {
-      text-align: right;
-    }
-  }
+
+  .package__subitem:before {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
   
 }
 
 
+@media (max-width: @tablet) {
+  .package__program {
+    text-align: left;
+    margin-top: 45px;
+  }
+  .package__subitem {
+    text-align: left;
+    
 
+    &:last-child {
+      margin-top: 48px;
+      text-align: right;
+    }
+   
+  }
+   .package__icon-wrapper {
+      text-align: right ;
+    }
+}
+
+@media (min-width: @mob-xs) and (max-width: 767px) {
+  .package__container {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @tablet) and (max-width: 1499px) {
+    .package__subitem {
+      padding-top: 30px;
+      &:last-child {
+        padding-top: 20px;
+      }
+    }
+}
+
+
+@media (max-width: @mob-xs) {
+    .package__main-btn {
+    padding: 8px 33px;
+  }
+    .package__add-btn--selected,
+    .package__add-btn {
+      padding: 8px 26px;
+    }
+
+}

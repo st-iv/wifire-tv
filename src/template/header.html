@@ -11,14 +11,12 @@
 			</li>
 		</ul>
 		
-		<!-- End top menu -->
-		
 		<ul class="top-menu__list top-menu__list--right">
 			
 			<li class="top-menu__item top-menu__shop">
 				<a href="#!" class="top-menu__link">
-					<img src="./img/cart.png" alt="">
 					<span>Интернет магазин</span>
+					<img src="./img/cart.png" alt="">
 				</a>
 			</li>
 			<li class="top-menu__item top-menu__action">
@@ -33,22 +31,58 @@
 					<span>Личный кабинет</span>
 				</a>
 			</li>
+			<li class="nav__conctact-top">
+				<a href="" class="nav__link">
+					<span class="nav__top-desc">
+						Служба поддержки:<br>
+					</span>
+					<span class="nav__phone-top">
+						8 (499) 553 94 56
+					</span>
+				</a>
+			</li>
+			<li class="nav__conctact-top">
+				<a href="" class="nav__link">
+					<span class="nav__top-desc">
+						Служба поддержки:<br>
+					</span>
+					<span class="nav__phone-top">
+						8 (499) 553 94 56
+					</span>
+				</a>
+			</li>
+			
+			<!-- 			<li class="nav__conctact-top">
+				<a href="" class="nav__link">
+					<span class="nav__desc">
+									Служба поддержки:
+					</span>
+					<br>
+					<span class="nav__phone">
+									8 (499) 553 94 56
+					</span>
+				</a>
+			</li> -->
+			
+			
 		</ul>
 		
 	</div>
 </div>
+<!-- Main nav -->
 <nav class="navigation">
 	<div class="container">
-	<div class="mobile_menu">
-		<img class="img-responsive logo_xs" src="img/logo.png" alt="">
-		<a href="#!" class="menu-trigger-phone">
-			<img src="img/phone.png" alt="">
-		</a>
-		<a href="#!" class="menu-trigger">
-			<img src="img/menu.png" alt="">
-		</a>
-	</div>
-		<ul class="nav__list">
+		<div class="mobile_menu">
+			<img class="img-responsive logo_xs" src="img/logo.png" alt="">
+			<a href="#!" class="menu-trigger" data-list="#menu">
+				<img src="img/menu.png" alt="">
+			</a>
+			<a href="#!" class="menu-trigger" data-list="#contacts">
+				<img src="img/phone.png" alt="">
+			</a>
+		</div>
+		
+		<ul id="menu" class="nav__list list">
 			<li class="nav__item nav__item--logo">
 				<a href="" class="nav__link">
 					<img src="img/logo.png" alt="">
@@ -85,28 +119,29 @@
 					услуги
 				</a>
 			</li>
+			
 		</ul>
-				<ul class="nav__contact-list">
-					<li class="nav__conctact">
-						<a href="" class="nav__link">
-							<span class="nav__desc">Подключение:</span>
-							<br>
-							<span class="nav__phone">
-								8 (499) 553 94 56
-							</span>
-						</a>
-					</li>
-					<li class="nav__conctact">
-						<a href="" class="nav__link">
-							<span class="nav__desc">
-								Служба поддержки:
-							</span>
-							<br>
-							<span class="nav__phone">
-								8 (499) 553 94 56
-							</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+		<ul class="contact-menu list" id="contacts">
+			<li class="nav__conctact nav__item">
+				<a href="" class="nav__link">
+					<span class="nav__desc">Подключение:</span>
+					<br>
+					<span class="nav__phone">
+						8 (499) 553 94 56
+					</span>
+				</a>
+			</li>
+			<li class="nav__conctact nav__item">
+				<a href="" class="nav__link">
+					<span class="nav__desc">
+						Служба поддержки:
+					</span>
+					<br>
+					<span class="nav__phone">
+						8 (499) 553 94 56
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>

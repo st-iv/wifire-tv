@@ -22,12 +22,16 @@
 .footer__col {
 	list-style: none;
 }
-.footer__link {
+.footer__link, .footer__link:hover,
+.footer__link:active, .footer__link:focus {
   font-size: 1.1em;
+  color: #ababab;
 }
-.footer__link--title {
+.footer__link--title, .footer__link--title:hover,
+.footer__link--title:focus, .footer__link--title:active {
 	font-size: 1.3em;
 	font-family: 'Roboto-Regular';
+	color: #000;
 }
 
 .footer__soc-icon {
@@ -40,13 +44,16 @@
 	height: 40px;
 	width: 40px;
 }
-@media (min-width:1024px) {
+
+@media (min-width: @tablet) {
+
 	.footer__title {
 		padding-bottom: 20px;
 	}
 	.footer__col {
 	list-style: none;
 	float: right;
+	padding-right: 15px;
 	  &:first-child {
 	  	padding-left: 0;
 	  	float: none;
@@ -63,9 +70,54 @@
 	padding-bottom: 35px;
 	border-top: 1px solid #d3d3d3;
 	}
-
+	.footer__item {
+		margin-top: 5px;
+	}
 }
 
 
 
+.footer__title-icon {
+	display: none;	
+}
+.footer__title {
+		display: block;
+		width: 100%;
+	}
 
+@media (max-width: @mob) {
+	.footer__social {
+		padding-top: 30px;
+	}
+	.footer__wrap {
+		border-top: 2px solid #d3d3d3;
+	}
+	.footer__item {
+		display: none;
+		&:first-child {
+			display: block;
+		}
+	}
+	.footer__link--title {
+		font-family: 'Roboto-Light';
+		border-bottom: 2px solid #d3d3d3;
+		display: block;
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+	.footer__title-icon {
+		display: inline-block;
+		float: right;
+	}
+	.footer__col {
+		padding-left: 0;
+
+	}
+}
+
+// @media (max-width: @desktop) {
+// 	.footer__col {
+// 		padding-right: 15px;
+// 	}
+// }

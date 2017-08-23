@@ -1,0 +1,22 @@
+ @media (min-width:768px)
+{.container{width:750px}}
+
+ @media (min-width:992px)
+{.container{width:970px}}
+
+ @media (min-width:1500px)
+{.container{width:1400px}}
+
+
+740780399
+Csxtdf63
+
+tender@sz-pb.ru
+
+
+3883433@mail.ru
+
+
+
+
+
