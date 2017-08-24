@@ -15,6 +15,10 @@
 	display: inline-block;
 	float: left;
 }
+
+.nav__item:first-child {
+	margin-top: 6px;
+}
 .nav__link, .banner__link {
 	text-decoration: none;
 }
@@ -81,6 +85,7 @@
 
 .navigation {
 	background: #fff;
+	max-height: 83px;
 }
 .nav__link, .nav__link:hover, 
 .nav__link:active, .nav__link:focus {
@@ -98,8 +103,8 @@
 	margin-right: 48px;
 	display: inline-block;
 	padding: 0;
-	padding-bottom: 20px;
-	border-bottom: 3px solid #fff;
+	padding-bottom: 22px;
+	border-bottom: 3px solid transparent;
 }
 
 .nav__item:last-child {
@@ -107,8 +112,11 @@
 }
 
 .nav__item:hover {
-	padding-bottom: 20px;
+	padding-bottom: 16px;
 	border-bottom: 3px solid @orange;
+	&:first-child {
+		border-bottom: none;
+	}
 }
 
 
@@ -129,7 +137,7 @@
 .nav__list, .nav__contact-list {
 	padding-bottom: 0;
 	margin: 0;
-	padding-top: 15px;
+	padding-top: 22px;
 	padding-left: 0;
 	display:flex;
 	align-items: center;
@@ -137,7 +145,8 @@
 
 .nav__conctact {
 	margin-top: -25px;
-	margin-right: 75px;
+	margin-left: 65px;
+	padding-top: 19px;
 }
 .nav__conctact:last-child {
 	margin-right: 0;
@@ -228,6 +237,7 @@
 
 
 @media (min-width: @tablet) and (max-width: 1499px) {
+
 	.top-menu__list--left .top-menu__item:before  {
 		display: block;
 		content: "";
@@ -251,6 +261,9 @@
 		font-size: 0.785em;
 		color: #bebebe;
 	}
+	.nav__item:nth-child(2) {
+		margin-left: 68px;
+	}
 
 	.top-menu__list--right {
     padding-top: 39px;
@@ -273,9 +286,8 @@
 	.nav__conctact-top {
 		display: none;
 	}
-	.nav__conctact {
-		display: inline-block;
-	}
+
+
 
 }
 
