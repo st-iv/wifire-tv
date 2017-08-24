@@ -154,16 +154,9 @@ $(document).ready(function() {
 });//end ready
 
 
-// test
-$(function(){                       
-   $('.menu-trigger').click(function(){
-        $('.menu-trigger img').attr("src","img/1channel.png");
-        
-    });
-});
 
 
 
 
 
-$("#my_image").attr("src","second.jpg");
+// $("#my_image").attr("src","second.jpg");
